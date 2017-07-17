@@ -9,11 +9,6 @@
 import Foundation
 import UIKit
 
-enum Formula: Int {
-    case plus = 0
-    case minus = 1
-}
-
 class CalcView: UIView {
 
     @IBOutlet weak var upperField: UITextField!
@@ -22,18 +17,15 @@ class CalcView: UIView {
     
     @IBOutlet weak var resultLabel: UILabel!
     
-    @IBOutlet weak var formulaSwitch: UISegmentedControl!
+    @IBOutlet weak var formulaSwitch: UISwitch!
     
     
     @IBAction func formulaChanged(_ sender: Any) {
         
-        switch Formula(rawValue: self.formulaSwitch.selectedSegmentIndex) {
-        case .plus?:
+        if self.formulaSwitch.isOn {
             self.formula.text = "+"
-        case .minus?:
+        } else {
             self.formula.text = "-"
-        default:
-            return
         }
         
         DispatchQueue.main.async {
@@ -53,13 +45,11 @@ class CalcView: UIView {
         
         var result = 0
         
-        switch Formula(rawValue: self.formulaSwitch.selectedSegmentIndex) {
-        case .plus?:
+        if self.formulaSwitch.isOn {
+        
             result = upper + lower
-        case .minus?:
+        } else {
             result = upper - lower
-        default:
-            return
         }
         
         self.resultLabel.text = result.description
@@ -67,5 +57,9 @@ class CalcView: UIView {
         DispatchQueue.main.async {
             self.setNeedsDisplay()
         }
+    }
+    
+    override func awakeFromNib() {
+        self.formulaSwitch.accessibilityIdentifier = "FormulaChangeSwitch"
     }
 }

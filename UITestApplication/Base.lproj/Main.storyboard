@@ -24,6 +24,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1i-cM-4pG">
                                 <rect key="frame" x="165" y="117" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="MoveCalculater"/>
                                 <state key="normal" title="Calc"/>
                                 <connections>
                                     <segue destination="eIV-tk-jge" kind="show" id="gk0-zY-ReG"/>
@@ -89,6 +90,7 @@
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QQq-i6-9QM" userLabel="UpperField">
                                         <rect key="frame" x="0.0" y="5" width="100" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="UpperField"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="eZK-vJ-YOE"/>
                                         </constraints>
@@ -98,12 +100,14 @@
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QS2-nC-dTi">
                                         <rect key="frame" x="44.5" y="40" width="11" height="21"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="CalculateFomula"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Id8-vg-9Wp" userLabel="LowerField">
                                         <rect key="frame" x="0.0" y="66" width="100" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="LowerField"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -134,6 +138,7 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8W3-Z4-Gys" userLabel="ResultValue">
                                         <rect key="frame" x="31" y="15.5" width="100" height="0.0"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="CaluclateResult"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="Xft-eL-uv9"/>
                                         </constraints>
@@ -154,35 +159,32 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fAR-cI-tCr" userLabel="ButtonView">
-                                <rect key="frame" x="150.5" y="227" width="73" height="98"/>
+                                <rect key="frame" x="150.5" y="227" width="73" height="81"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Yf-8J-Fs9" userLabel="Calc">
                                         <rect key="frame" x="0.0" y="5" width="73" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="PerformCaluculateButton"/>
                                         <state key="normal" title="Caluculate"/>
                                         <connections>
                                             <action selector="performCalc:" destination="q9Y-RT-KVu" eventType="touchUpInside" id="XZM-T0-mrb"/>
                                         </connections>
                                     </button>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="48J-7Z-FBK">
-                                        <rect key="frame" x="13" y="40" width="47" height="29"/>
-                                        <segments>
-                                            <segment title="+"/>
-                                            <segment title="-"/>
-                                        </segments>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UCH-nG-k4Z">
+                                        <rect key="frame" x="12" y="40" width="51" height="31"/>
                                         <connections>
-                                            <action selector="formulaChanged:" destination="q9Y-RT-KVu" eventType="valueChanged" id="IS9-6G-wgT"/>
+                                            <action selector="formulaChanged:" destination="q9Y-RT-KVu" eventType="valueChanged" id="Way-k1-uLe"/>
                                         </connections>
-                                    </segmentedControl>
+                                    </switch>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="UCH-nG-k4Z" secondAttribute="bottom" constant="10" id="152-mQ-DJw"/>
                                     <constraint firstItem="8Yf-8J-Fs9" firstAttribute="top" secondItem="fAR-cI-tCr" secondAttribute="top" constant="5" id="6LX-1v-dHA"/>
-                                    <constraint firstItem="48J-7Z-FBK" firstAttribute="top" secondItem="8Yf-8J-Fs9" secondAttribute="bottom" constant="5" id="LfK-Sa-XJu"/>
+                                    <constraint firstItem="UCH-nG-k4Z" firstAttribute="top" secondItem="8Yf-8J-Fs9" secondAttribute="bottom" constant="5" id="KnJ-Sz-AzB"/>
                                     <constraint firstAttribute="trailing" secondItem="8Yf-8J-Fs9" secondAttribute="trailing" id="MGO-rW-YjC"/>
+                                    <constraint firstItem="UCH-nG-k4Z" firstAttribute="centerX" secondItem="8Yf-8J-Fs9" secondAttribute="centerX" id="QLe-9k-6DG"/>
                                     <constraint firstItem="8Yf-8J-Fs9" firstAttribute="centerX" secondItem="fAR-cI-tCr" secondAttribute="centerX" id="iMN-dL-VsX"/>
                                     <constraint firstItem="8Yf-8J-Fs9" firstAttribute="leading" secondItem="fAR-cI-tCr" secondAttribute="leading" id="iSp-iY-eir"/>
-                                    <constraint firstAttribute="bottom" secondItem="48J-7Z-FBK" secondAttribute="bottom" constant="30" id="oT8-vM-5VH"/>
-                                    <constraint firstItem="48J-7Z-FBK" firstAttribute="centerX" secondItem="8Yf-8J-Fs9" secondAttribute="centerX" id="y2S-7O-jzu"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -197,7 +199,7 @@
                         </constraints>
                         <connections>
                             <outlet property="formula" destination="QS2-nC-dTi" id="Ef5-cn-dbm"/>
-                            <outlet property="formulaSwitch" destination="48J-7Z-FBK" id="Z5a-Q3-vzB"/>
+                            <outlet property="formulaSwitch" destination="UCH-nG-k4Z" id="Xe5-Oq-xcM"/>
                             <outlet property="lowerField" destination="Id8-vg-9Wp" id="yw6-dW-1o1"/>
                             <outlet property="resultLabel" destination="8W3-Z4-Gys" id="tS2-9g-8CZ"/>
                             <outlet property="upperField" destination="QQq-i6-9QM" id="l99-Wm-AG0"/>
