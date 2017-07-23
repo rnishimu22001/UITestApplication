@@ -6,10 +6,26 @@
 //  Copyright © 2017年 rnishimu. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class UITestCell: UITableViewCell {
     
+    @IBOutlet weak var testCellImage: UIImageView!
+    @IBOutlet weak var testCellLabel: UILabel!
     
+    var testLabel = ""
+    var testImage = UIImage()
+       
+    func setUp(with image: UIImage, label: String) {
+       
+        self.testCellImage.image = image
+        self.testCellLabel.text = label
+        DispatchQueue.main.async {
+            self.setNeedsDisplay()
+        }
+    }
+    
+    class func height() -> CGFloat {
+        return 112.0
+    }
 }

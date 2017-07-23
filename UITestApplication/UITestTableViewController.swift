@@ -11,4 +11,43 @@ import UIKit
 
 class UITestTableViewController: UITableViewController {
     
+    struct CellIdentifier {
+        static let test = "testCell"
+    }
+    
+    override func viewDidLoad() {
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        
+        let testCell = UINib(nibName: "UITestCell", bundle: nil)
+        
+        self.tableView.register(testCell, forCellReuseIdentifier: CellIdentifier.test)
+    }
+}
+
+extension UITestTableViewController {
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+}
+
+extension UITestTableViewController {
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = self.tableView.dequeueReusableCell(withIdentifier: CellIdentifier.test) as? UITestCell else {
+            return UITableViewCell()
+        }
+        cell.setUp(with: UIImage(), label: indexPath.row.description)
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITestCell.height()
+    }
+    
 }

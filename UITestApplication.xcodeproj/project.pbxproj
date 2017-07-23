@@ -18,8 +18,9 @@
 		5A7F70FD1EDD67C00078C85E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A7F70FB1EDD67C00078C85E /* LaunchScreen.storyboard */; };
 		5A7F71081EDD67C00078C85E /* UITestApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F71071EDD67C00078C85E /* UITestApplicationTests.swift */; };
 		5AA1418D1F1B797B008BC755 /* UITestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA1418C1F1B797B008BC755 /* UITestCell.swift */; };
-		5AD29F251F1CBE30008DA223 /* UITestApplicationUITopMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD29F241F1CBE30008DA223 /* UITestApplicationUITopMenuTests.swift */; };
-		5AD29F2D1F1CBF54008DA223 /* UITestApplicationUICalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD29F2C1F1CBF54008DA223 /* UITestApplicationUICalcTests.swift */; };
+		5AD29F251F1CBE30008DA223 /* UITestApplicationTopMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD29F241F1CBE30008DA223 /* UITestApplicationTopMenuUITests.swift */; };
+		5AD29F2D1F1CBF54008DA223 /* UITestApplicationCalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD29F2C1F1CBF54008DA223 /* UITestApplicationCalcUITests.swift */; };
+		5AD29F2F1F1CE1CD008DA223 /* UITestApplicationTableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD29F2E1F1CE1CD008DA223 /* UITestApplicationTableUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,9 +57,10 @@
 		5A7F71091EDD67C00078C85E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AA1418C1F1B797B008BC755 /* UITestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITestCell.swift; path = TableView/UITestCell.swift; sourceTree = "<group>"; };
 		5AD29F221F1CBE30008DA223 /* UITestApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITestApplicationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5AD29F241F1CBE30008DA223 /* UITestApplicationUITopMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestApplicationUITopMenuTests.swift; sourceTree = "<group>"; };
+		5AD29F241F1CBE30008DA223 /* UITestApplicationTopMenuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestApplicationTopMenuUITests.swift; sourceTree = "<group>"; };
 		5AD29F261F1CBE30008DA223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5AD29F2C1F1CBF54008DA223 /* UITestApplicationUICalcTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestApplicationUICalcTests.swift; sourceTree = "<group>"; };
+		5AD29F2C1F1CBF54008DA223 /* UITestApplicationCalcUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestApplicationCalcUITests.swift; sourceTree = "<group>"; };
+		5AD29F2E1F1CE1CD008DA223 /* UITestApplicationTableUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestApplicationTableUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,8 +154,9 @@
 		5AD29F231F1CBE30008DA223 /* UITestApplicationUITests */ = {
 			isa = PBXGroup;
 			children = (
-				5AD29F241F1CBE30008DA223 /* UITestApplicationUITopMenuTests.swift */,
-				5AD29F2C1F1CBF54008DA223 /* UITestApplicationUICalcTests.swift */,
+				5AD29F241F1CBE30008DA223 /* UITestApplicationTopMenuUITests.swift */,
+				5AD29F2C1F1CBF54008DA223 /* UITestApplicationCalcUITests.swift */,
+				5AD29F2E1F1CE1CD008DA223 /* UITestApplicationTableUITests.swift */,
 				5AD29F261F1CBE30008DA223 /* Info.plist */,
 			);
 			path = UITestApplicationUITests;
@@ -315,8 +318,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AD29F251F1CBE30008DA223 /* UITestApplicationUITopMenuTests.swift in Sources */,
-				5AD29F2D1F1CBF54008DA223 /* UITestApplicationUICalcTests.swift in Sources */,
+				5AD29F251F1CBE30008DA223 /* UITestApplicationTopMenuUITests.swift in Sources */,
+				5AD29F2D1F1CBF54008DA223 /* UITestApplicationCalcUITests.swift in Sources */,
+				5AD29F2F1F1CE1CD008DA223 /* UITestApplicationTableUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +565,7 @@
 				5AD29F2B1F1CBE30008DA223 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
