@@ -30,6 +30,8 @@ class UITestApplicationUITopMenuTests: XCTestCase {
         XCTAssertTrue(calcButton.isEnabled)
         // test will be failed
         XCTAssertTrue(calcButton.isHittable)
+       
+        XCTAssertEqual(calcButton.label, "Calc")
     }
     
     func testMoveTableButton() {
@@ -38,6 +40,8 @@ class UITestApplicationUITopMenuTests: XCTestCase {
         XCTAssertTrue(tableButton.exists)
         XCTAssertTrue(tableButton.isEnabled)
         XCTAssertTrue(tableButton.isHittable)
+        
+        XCTAssertEqual(tableButton.label, "TableView")
         
         tableButton.tap()
     }
