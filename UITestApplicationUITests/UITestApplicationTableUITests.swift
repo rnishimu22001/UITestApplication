@@ -26,6 +26,7 @@ class UITestApplicationTableUITests: XCTestCase {
         for i in 0..<rowCount {
             let cell = cells.element(boundBy: UInt(i))
             let label = cell.staticTexts[i.description]
+            // test will be failed
             XCTAssertTrue(label.exists, "row number:" + i.description)
         }
         
