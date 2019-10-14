@@ -28,9 +28,8 @@ class UITestApplicationUITopMenuTests: XCTestCase {
         
         XCTAssertTrue(calcButton.exists)
         XCTAssertTrue(calcButton.isEnabled)
-        // test will be failed
-        XCTAssertTrue(calcButton.isHittable)
-       
+        // The calcButton is out of screen
+        XCTAssertFalse(calcButton.isHittable)
         XCTAssertEqual(calcButton.label, "Calc")
     }
     
