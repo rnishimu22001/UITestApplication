@@ -21,6 +21,7 @@
 		5AD29F251F1CBE30008DA223 /* UITestApplicationTopMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD29F241F1CBE30008DA223 /* UITestApplicationTopMenuUITests.swift */; };
 		5AD29F2D1F1CBF54008DA223 /* UITestApplicationCalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD29F2C1F1CBF54008DA223 /* UITestApplicationCalcUITests.swift */; };
 		5AD29F2F1F1CE1CD008DA223 /* UITestApplicationTableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD29F2E1F1CE1CD008DA223 /* UITestApplicationTableUITests.swift */; };
+		5AD6C36D23543633006C0C06 /* PushTestDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD6C36C23543633006C0C06 /* PushTestDestinationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		5AD29F261F1CBE30008DA223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AD29F2C1F1CBF54008DA223 /* UITestApplicationCalcUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestApplicationCalcUITests.swift; sourceTree = "<group>"; };
 		5AD29F2E1F1CE1CD008DA223 /* UITestApplicationTableUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestApplicationTableUITests.swift; sourceTree = "<group>"; };
+		5AD6C36C23543633006C0C06 /* PushTestDestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTestDestinationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		5A7F70F11EDD67C00078C85E /* UITestApplication */ = {
 			isa = PBXGroup;
 			children = (
+				5AD6C36B23543611006C0C06 /* TestDestination */,
 				5AA141891F1B7670008BC755 /* Clac */,
 				5AA141881F1B7667008BC755 /* TableView */,
 				5A7F70F21EDD67C00078C85E /* AppDelegate.swift */,
@@ -160,6 +163,14 @@
 				5AD29F261F1CBE30008DA223 /* Info.plist */,
 			);
 			path = UITestApplicationUITests;
+			sourceTree = "<group>";
+		};
+		5AD6C36B23543611006C0C06 /* TestDestination */ = {
+			isa = PBXGroup;
+			children = (
+				5AD6C36C23543633006C0C06 /* PushTestDestinationViewController.swift */,
+			);
+			name = TestDestination;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +313,7 @@
 				5AA1418D1F1B797B008BC755 /* UITestCell.swift in Sources */,
 				5A58E6BF1F1B7C7200CA6220 /* UITestTableViewController.swift in Sources */,
 				5A58E6BC1F1B7C4700CA6220 /* CalcView.swift in Sources */,
+				5AD6C36D23543633006C0C06 /* PushTestDestinationViewController.swift in Sources */,
 				5A58E6BA1F1B7C3B00CA6220 /* CalcViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

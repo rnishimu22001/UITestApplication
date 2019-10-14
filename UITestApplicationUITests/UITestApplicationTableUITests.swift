@@ -9,35 +9,34 @@
 import Foundation
 import XCTest
 
-class UITestApplicationTableUITests: XCTestCase {
+final class UITestApplicationTableUITests: XCTestCase {
     
     let app = XCUIApplication()
     
     override func setUp() {
+        super.setUp()
         self.app.launch()
         self.app.buttons["MoveTable"].tap()
+    }
+    
+    func testTableViewCellNumber() {
+        let cells = self.app.cells.matching(identifier: "TestCell")
+        XCTAssertEqual(cells.count, 1001)
     }
     
     func testTableViewCellExist() {
         
         let cells = self.app.cells.matching(identifier: "TestCell")
-        let firstIndex = 0
-        let lastIndex = 5
-        let rowCount = firstIndex...lastIndex
-        
-        rowCount.forEach {
-            let cell = cells.element(boundBy: $0)
-            let label = cell.staticTexts[$0.description]
-            switch $0 {
-            case firstIndex...4:
-                // Found
-                XCTAssertTrue(label.exists, "row number:" + $0.description)
-            case lastIndex...lastIndex:
-                // Cell not found
-                XCTAssertFalse(label.exists, "row number:" + $0.description)
-            default:
-                XCTFail()
-            }
-        }
+        let cellAt1000 = cells.element(boundBy: 1000)
+        let label = cellAt1000.staticTexts[1000.description].label
+        XCTAssertTrue(cellAt1000.exists)
+        XCTAssertFalse(cellAt1000.isHittable)
+        XCTAssertEqual(label, "1000")
+    }
+    
+    func testTableViewCellSelect() {
+        let cells = self.app.cells.matching(identifier: "TestCell")
+        let cellAt1000 = cells.element(boundBy: 1000)
+        cellAt1000.tap()
     }
 }

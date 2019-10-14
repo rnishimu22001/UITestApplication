@@ -32,7 +32,7 @@ extension UITestTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15
+        return 1001
     }
 }
 
@@ -48,6 +48,13 @@ extension UITestTableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITestCell.height()
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.row  == (self.tableView(tableView, numberOfRowsInSection: indexPath.section) - 1) else {
+            return
+        }
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

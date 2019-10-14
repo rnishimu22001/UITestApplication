@@ -8,15 +8,13 @@
 
 import XCTest
 
-class UITestApplicationUITopMenuTests: XCTestCase {
+final class UITestApplicationUITopMenuTests: XCTestCase {
     
     let app = XCUIApplication()
         
     override func setUp() {
         super.setUp()
-        continueAfterFailure = false
         self.app.launch()
-
     }
     
     override func tearDown() {
