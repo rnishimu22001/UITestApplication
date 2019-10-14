@@ -41,6 +41,8 @@ final class UITestApplicationUITopMenuTests: XCTestCase {
         XCTAssertEqual(tableButton.label, "TableView")
         
         tableButton.tap()
+        
+        
     }
     
 }

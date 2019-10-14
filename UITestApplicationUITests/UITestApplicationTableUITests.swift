@@ -45,5 +45,6 @@ final class UITestApplicationTableUITests: XCTestCase {
         let cellAt1000 = cells.element(boundBy: 1000)
         // 抜き出したセルをタップ
         cellAt1000.tap()
+        
     }
 }
