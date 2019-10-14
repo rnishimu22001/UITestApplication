@@ -76,36 +76,6 @@
             </objects>
             <point key="canvasLocation" x="671" y="128"/>
         </scene>
-        <!--Push Test Destination View Controller-->
-        <scene sceneID="qcJ-62-Usb">
-            <objects>
-                <viewController id="Zbj-Ij-6Uz" customClass="PushTestDestinationViewController" customModule="UITestApplication" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3JA-tU-xEU"/>
-                        <viewControllerLayoutGuide type="bottom" id="JG5-rT-xcr"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="AxB-EE-CXu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btU-di-YkI">
-                                <rect key="frame" x="165.5" y="323" width="44" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="btU-di-YkI" firstAttribute="centerX" secondItem="AxB-EE-CXu" secondAttribute="centerX" id="kKQ-bX-UHg"/>
-                            <constraint firstItem="btU-di-YkI" firstAttribute="centerY" secondItem="AxB-EE-CXu" secondAttribute="centerY" id="yUw-4h-9wa"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kug-HL-H60" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="396" y="1178"/>
-        </scene>
         <!--Test Table View Controller-->
         <scene sceneID="gVq-bP-NT1">
             <objects>
@@ -238,6 +208,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration" identifier="CalcView"/>
                         <constraints>
                             <constraint firstItem="fAR-cI-tCr" firstAttribute="centerX" secondItem="q9Y-RT-KVu" secondAttribute="centerX" id="2YS-Ro-fhK"/>
                             <constraint firstItem="fAR-cI-tCr" firstAttribute="top" secondItem="IxK-UK-gDb" secondAttribute="bottom" constant="35" id="71f-IV-yZv"/>

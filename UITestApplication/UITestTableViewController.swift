@@ -56,5 +56,4 @@ extension UITestTableViewController {
         }
         self.dismiss(animated: true, completion: nil)
     }
-    
 }
